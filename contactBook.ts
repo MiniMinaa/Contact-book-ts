@@ -21,7 +21,7 @@ function listContacts(): void {
     }
     contacts.forEach(contact => { /*går igenom varje för sig*/
         console.log(
-            `ÌD: ${contact.id}, Name: ${contact.name}, Email: ${contact.email ?? "N/A"}, Phone: ${contact.phone ?? "N/A"}`
+            `ÌD: ${contact.id}, Name: ${contact.name}, Email: ${contact.email ?? "N/A"}, Phone: ${contact.phone ?? "N/A"}` // N/A betyder not applicable för att jag har inte lagt in
         );
     });
 }
@@ -45,3 +45,14 @@ function removeById(id: number): boolean {
             return false;
         }
     }
+
+    //TEST
+addContact({id:1, name: "Rut"});
+addContact({id:2, name: "Alva"});
+addContact({id:3, name: "Mina"});
+
+
+listContacts();
+findByName("Rut");
+removeById(2);
+listContacts();
